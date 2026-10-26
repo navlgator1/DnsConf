@@ -2,6 +2,7 @@ package com.novibe.dns.next_dns.http;
 
 import com.novibe.common.http.ApiRequestSender;
 import com.novibe.common.exception.CredentialsException;
+import com.novibe.common.exception.DnsApiException;
 import com.novibe.common.exception.DnsHttpError;
 import com.novibe.common.util.Log;
 import com.novibe.dns.next_dns.http.dto.response.NextDnsResponse;
@@ -66,22 +67,18 @@ public abstract class AbstractNextDnsApiClient extends ApiRequestSender {
 
     /**
      * Sends a request per element, so the progress of long lists is visible in the log.
+     * A refused element stops the profile: a half applied configuration must not end up as a successful run.
      */
     protected <D, R extends NextDnsResponse<?>> void callApiForEach(List<D> requestList, Function<D, R> request) {
-        int succeeded = 0;
-        for (D requestData : requestList) {
-            R response = request.apply(requestData);
+        for (int i = 0; i < requestList.size(); i++) {
+            R response = request.apply(requestList.get(i));
             if (ofNullable(response).map(NextDnsResponse::getErrors).isPresent()) {
-                Log.fail("Failed request: " + response.getErrors());
-            } else {
-                Log.progress("Current success progress: " + ++succeeded + "/" + requestList.size());
+                throw new DnsApiException("Failed request %s of %s: %s"
+                        .formatted(i + 1, requestList.size(), response.getErrors()));
             }
+            Log.progress("Current success progress: " + (i + 1) + "/" + requestList.size());
         }
-        if (succeeded == requestList.size()) {
-            Log.common("\nCompleted");
-        } else {
-            Log.common("\nCompleted with %s requests failed of %s".formatted(requestList.size() - succeeded, requestList.size()));
-        }
+        Log.common("\nCompleted");
     }
 
 }
