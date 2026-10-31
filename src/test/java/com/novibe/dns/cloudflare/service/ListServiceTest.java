@@ -1,7 +1,10 @@
 package com.novibe.dns.cloudflare.service;
 
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.provider.ValueSource;
+
+import com.novibe.dns.cloudflare.http.dto.Item;
 
 import java.util.List;
 import java.util.stream.IntStream;
@@ -22,4 +25,14 @@ class ListServiceTest {
         assertEquals((size + 999) / 1000, chunks.size());
         assertTrue(chunks.stream().allMatch(chunk -> !chunk.isEmpty() && chunk.size() <= 1000));
     }
+
+    @Test
+    void sendsWildcardDomainsAsPlainOnesWithoutDuplicates() {
+        List<String> websites = List.of("*.ads.example", "ads.example", "tracker.example", "*.tracker.example");
+
+        List<String> items = ListService.websiteAsItem(websites).stream().map(Item::getValue).toList();
+
+        assertEquals(List.of("ads.example", "tracker.example"), items);
+    }
+
 }
