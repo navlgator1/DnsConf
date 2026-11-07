@@ -1,16 +1,16 @@
-grok.com
-grok.x.ai
-assets.grok.com
-grok.x.com
-accounts.x.ai
-auth.x.ai
-gemini.google.com
-geminiweb-pa.clients.google.com
-gemini.google
-geminiweb-pa.clients6.google.com
-chatgpt.com
-openai.com
-chatgpt.site
-oaiusercontent.com
-oaistatic.com
-googleapis.com
+0.0.0.0 grok.com
+0.0.0.0 grok.x.ai
+0.0.0.0 assets.grok.com
+0.0.0.0 grok.x.com
+0.0.0.0 accounts.x.ai
+0.0.0.0 auth.x.ai
+0.0.0.0 gemini.google.com
+0.0.0.0 geminiweb-pa.clients.google.com
+0.0.0.0 gemini.google
+0.0.0.0 geminiweb-pa.clients6.google.com
+0.0.0.0 chatgpt.com
+0.0.0.0 openai.com
+0.0.0.0 chatgpt.site
+0.0.0.0 oaiusercontent.com
+0.0.0.0 oaistatic.com
+0.0.0.0 googleapis.com
