@@ -78,12 +78,7 @@ public class RuleService {
                 .ruleSettings(new CreateRuleRequest.RuleSettings(List.of(overrideIp)))
                 .build();
         Log.io("Posting new override rule for IP: " + overrideIp);
-        try {
-            Thread.sleep(1500);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
-        SingleRuleApiResponse result = cloudflareRuleClient.createBlockingRule(rule);
+               SingleRuleApiResponse result = cloudflareRuleClient.createBlockingRule(rule);
         if (!result.isSuccess()) {
             throw new DnsApiException("Failed to set override rule for IP %s: %s".formatted(overrideIp, result.getErrors()));
         }
