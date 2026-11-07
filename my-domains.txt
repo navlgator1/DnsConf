@@ -13,4 +13,4 @@
 1.1.1.1 chatgpt.site
 1.1.1.1 oaiusercontent.com
 1.1.1.1 oaistatic.com
-1.1.1.1 googleapis.com
+1.1.1.1 generativelanguage.googleapis.com
