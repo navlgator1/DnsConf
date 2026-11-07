@@ -14,3 +14,7 @@
 1.1.1.1 oaiusercontent.com
 1.1.1.1 oaistatic.com
 1.1.1.1 generativelanguage.googleapis.com
+1.1.1.1 claude.ai
+1.1.1.1 anthropic.com
+1.1.1.1 api.anthropic.com
+1.1.1.1 cdn.usefathom.com
