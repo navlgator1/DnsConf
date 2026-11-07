@@ -1,0 +1,16 @@
+grok.com
+grok.x.ai
+assets.grok.com
+grok.x.com
+accounts.x.ai
+auth.x.ai
+gemini.google.com
+geminiweb-pa.clients.google.com
+gemini.google
+geminiweb-pa.clients6.google.com
+chatgpt.com
+openai.com
+chatgpt.site
+oaiusercontent.com
+oaistatic.com
+googleapis.com
