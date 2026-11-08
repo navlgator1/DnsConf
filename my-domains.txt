@@ -13,8 +13,13 @@
 1.1.1.1 chatgpt.site
 1.1.1.1 oaiusercontent.com
 1.1.1.1 oaistatic.com
-1.1.1.1 generativelanguage.googleapis.com
 1.1.1.1 claude.ai
 1.1.1.1 anthropic.com
 1.1.1.1 api.anthropic.com
 1.1.1.1 cdn.usefathom.com
+1.1.1.1 robinfrontend-pa.googleapis.com
+1.1.1.1 proactivebackend-pa.googleapis.com
+1.1.1.1 assistant-s3-pa.googleapis.com
+1.1.1.1 searchfrontend-pa.googleapis.com
+1.1.1.1 generativelanguage.googleapis.com
+1.1.1.1 alkalimakersuite-pa.clients6.google.com
