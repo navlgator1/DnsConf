@@ -23,3 +23,4 @@
 1.1.1.1 searchfrontend-pa.googleapis.com
 1.1.1.1 generativelanguage.googleapis.com
 1.1.1.1 alkalimakersuite-pa.clients6.google.com
+1.1.1.1 dns-conf-ui.vercel.app
