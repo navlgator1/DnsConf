@@ -19,3 +19,4 @@
 1.1.1.1 cdn.usefathom.com
 1.1.1.1 robinfrontend-pa.googleapis.com
 1.1.1.1 proactivebackend-pa.googleapis.com
+1.1.1.1 proton.me
